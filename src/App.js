@@ -1,18 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Intro from './Intro'
 import './App.css';
 
 class App extends Component {
+  state = {
+    score: 0,
+    problem: 0,
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div id="header">
+          <div className="logo">
+            <img alt="babbel logo" src="https://i.postimg.cc/D097J3pM/Screen_Shot_2018-09-26_at_5.16.35_PM.png"/>
+          </div>
+          <div className="score">
+            Score: {this.state.score}
+          </div>
+          <div className="progress-bar">
+          </div>
+          <div className="progress-number">
+            1/10
+          </div>
+          <div className="welcome">
+            Welcome!
+          </div>
+        </div>
+        <div className="main">
+          <Intro/>
+        </div>
       </div>
     );
   }
